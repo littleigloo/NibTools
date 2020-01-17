@@ -1,3 +1,3 @@
 # NibTools
 
-A description of this package.
+Swift Package 📦 Nib loading and management helpers.
