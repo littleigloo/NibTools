@@ -37,14 +37,14 @@ extension SelfExplainable where Self: Cell {
 
 //  MARK: -
 
-protocol CustomXibNamable {
+public protocol CustomXibNamable {
     static var customXibName: String { get }
     var customXibName: String { get }
 }
 
 // ...........
 
-extension CustomXibNamable {
+public extension CustomXibNamable {
     
     static var customXibName: String {
         return "\(Self.self)"
