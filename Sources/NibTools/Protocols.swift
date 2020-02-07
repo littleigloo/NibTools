@@ -10,25 +10,25 @@ import UIKit
 
 // ...........
 
-protocol Cell {}
+public protocol Cell {}
 
 // ...........
 
-extension UICollectionViewCell: Cell {}
+public extension UICollectionViewCell: Cell {}
 
 // ...........
 
-extension UITableViewCell: Cell {}
+public extension UITableViewCell: Cell {}
 
 //  MARK: -
 
-protocol SelfExplainable: CustomXibNamable where Self: Cell {
+public protocol SelfExplainable: CustomXibNamable where Self: Cell {
     static var cellId: String { get }
 }
 
 // ...........
 
-extension SelfExplainable where Self: Cell {
+public extension SelfExplainable where Self: Cell {
     
     static var customXibName: String {
         return "\(Self.self)"
@@ -37,14 +37,14 @@ extension SelfExplainable where Self: Cell {
 
 //  MARK: -
 
-public protocol CustomXibNamable {
+public public protocol CustomXibNamable {
     static var customXibName: String { get }
     var customXibName: String { get }
 }
 
 // ...........
 
-public extension CustomXibNamable {
+public public extension CustomXibNamable {
     
     static var customXibName: String {
         return "\(Self.self)"
