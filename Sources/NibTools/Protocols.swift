@@ -14,11 +14,11 @@ public protocol Cell {}
 
 // ...........
 
-public extension UICollectionViewCell: Cell {}
+extension UICollectionViewCell: Cell {}
 
 // ...........
 
-public extension UITableViewCell: Cell {}
+extension UITableViewCell: Cell {}
 
 //  MARK: -
 
@@ -37,14 +37,14 @@ public extension SelfExplainable where Self: Cell {
 
 //  MARK: -
 
-public public protocol CustomXibNamable {
+public protocol CustomXibNamable {
     static var customXibName: String { get }
     var customXibName: String { get }
 }
 
 // ...........
 
-public public extension CustomXibNamable {
+public extension CustomXibNamable {
     
     static var customXibName: String {
         return "\(Self.self)"
